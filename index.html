@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#23406B">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png">
+<title>北越龍龍經典 6 日</title>
+<style>
+:root{--b:#23406B;--r:#D9482F;--y:#F2B441;--p:#E58FA6;--g:#2F7D6B;--l:#7FB9D6;--bg:#EEF4F3;--t:#1c2b3f}
+*{box-sizing:border-box}[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--t);font:16px/1.7 "Noto Sans TC","Noto Sans CJK TC","PingFang TC","Microsoft JhengHei",sans-serif;padding:0 12px calc(28px + env(safe-area-inset-bottom))}
+.w{max-width:640px;margin:0 auto}
+.c{background:#fff;border:1.5px solid var(--b);border-radius:16px;padding:14px;margin:12px 0}
+.s{background:#E2F0F7}.f{background:#FDEEC6}.m{background:#FBE1E8}.n{background:#F3F5F6}
+.hero{padding:0;overflow:hidden;margin-top:12px}.hero svg{display:block;width:100%;height:auto}.ht{padding:10px 16px 16px}
+h1{margin:0;font-size:26px;line-height:1.3;color:var(--b)}h2{font-size:21px;margin:14px 0 2px;color:var(--b)}h3{font-size:18px;margin:0 0 6px;color:var(--b)}
+.sm{margin:0 0 6px;color:#44546a}.cd{margin-top:8px;padding:8px 12px;background:var(--y);border-radius:12px;font-weight:600}
+#nav{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
+button,input,textarea{font-family:inherit;font-size:16px;color:inherit}
+#nav button{min-height:64px;border-radius:16px;border:1.5px solid var(--b);background:#fff;color:var(--b);font-weight:600;font-size:17px;display:flex;align-items:center;justify-content:center;gap:8px}
+#nav button.on,.db.on{background:var(--b);color:#fff}
+.dg{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.db{min-height:60px;border-radius:14px;border:1.5px solid var(--b);background:#fff;color:var(--b);line-height:1.3}.db span{display:block;font-size:14px}
+.ib{position:sticky;top:8px;z-index:9;padding:8px 12px;box-shadow:0 2px 0 rgba(35,64,107,.15)}.ib summary{cursor:pointer;font-weight:600}.ib p{margin:6px 0 0}
+.seg{display:flex;gap:8px}.seg button{flex:1;min-height:48px;border-radius:12px;border:1.5px solid var(--b);background:#fff;color:var(--b)}.seg .on{background:var(--b);color:#fff}
+.ct{display:flex;gap:10px;align-items:flex-start}.ct input{width:26px;height:26px;flex:none;margin-top:3px;accent-color:var(--g)}.ct b{font-size:17px}
+.tm{display:inline-block;background:var(--b);color:#fff;border-radius:8px;padding:0 8px;margin-right:6px;font-size:15px}
+.mu{background:var(--r);color:#fff;border-radius:8px;padding:0 8px;margin-left:6px;font-size:14px}
+.tg{font-style:normal;background:#fff;border:1px solid var(--b);border-radius:8px;padding:0 6px;font-size:13px;margin-left:6px}
+.x{margin:4px 0 0 36px}.ex{margin:4px 0 0 36px;font-size:15px;color:#35465e}
+.mb{display:inline-block;margin:6px 0 0 36px;min-height:40px;line-height:40px;padding:0 14px;border-radius:12px;background:var(--b);color:#fff;text-decoration:none;font-size:15px}
+.dn{opacity:.55}.dn b{text-decoration:line-through}
+.tr{margin:0 0 0 14px;padding:4px 0 4px 14px;border-left:3px dashed var(--g);font-size:15px;color:#2b4a45}
+.pop{animation:pop .5s cubic-bezier(.34,1.56,.64,1) both;animation-delay:calc(var(--i,0)*70ms)}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+.bp .bh{display:flex;justify-content:space-between;font-weight:600;color:var(--b)}
+.rt{display:flex;align-items:center;justify-content:space-between;margin:8px 0;text-align:center}.rt big{display:block;font-size:30px;font-weight:700;line-height:1.1}.rt small{font-size:14px;color:#44546a}.ar{color:var(--r);font-size:22px;line-height:1.2}
+.bm{border-top:2px dashed var(--b);padding-top:8px;font-size:15px}
+.pg{height:14px;border:1.5px solid var(--b);border-radius:8px;overflow:hidden;background:#fff}.pg i{display:block;height:100%;background:var(--g)}
+.li{display:flex;align-items:center;gap:10px;padding:4px 0}.li input[type=checkbox]{width:24px;height:24px;accent-color:var(--g)}.li span{flex:1}.li button,.add button,.back,.ins{min-height:44px;border-radius:12px;border:1.5px solid var(--b);background:#fff;color:var(--b);padding:0 14px}
+.add{display:flex;gap:8px;margin-top:8px}.add input,.f2 input,.f2 textarea{flex:1;min-height:44px;border:1.5px solid var(--b);border-radius:12px;padding:6px 10px;width:100%}
+.back{width:100%;min-height:56px;margin-top:8px;background:var(--b);color:#fff;font-weight:600}
+.row{display:flex;gap:8px;align-items:center;margin:4px 0}.row label{flex:none;width:96px}.chips span{display:inline-block;background:var(--bg);border:1px solid var(--b);border-radius:12px;padding:0 10px;margin:3px 3px 3px 0;font-size:15px}
+a.tel{color:var(--b);font-weight:600}
+.ln{transform-box:fill-box;transform-origin:50% 0;animation:sw 4s ease-in-out infinite alternate}.ln:nth-of-type(2){animation-delay:-1.3s}
+.st{animation:up 3s ease-in infinite}.st:nth-of-type(2){animation-delay:-1s}.rp{animation:dr 6s ease-in-out infinite alternate}.bt{animation:bb 5s ease-in-out infinite alternate}
+@keyframes sw{from{transform:rotate(-5deg)}to{transform:rotate(5deg)}}@keyframes up{0%{transform:translateY(0);opacity:0}30%{opacity:.9}100%{transform:translateY(-14px);opacity:0}}@keyframes dr{to{transform:translateX(10px)}}@keyframes bb{to{transform:translateY(3px)}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style></head><body><div class="w">
+<header class="c hero">
+<svg viewBox="0 0 360 180" role="img" aria-label="下龍灣插畫：石灰岩島、郵輪、竹筏、燈籠與熱河粉">
+<rect width="360" height="180" fill="#DDEBF3"/><circle cx="282" cy="56" r="22" fill="#F2B441"/>
+<path d="M0 118L40 74 66 100 100 62 140 118Z" fill="#9CCBBE"/><path d="M120 118L170 56 210 100 236 80 290 118Z" fill="#2F7D6B"/><path d="M250 118L300 84 330 104 360 90V118Z" fill="#25675A"/>
+<rect y="116" width="360" height="64" fill="#7FB9D6"/>
+<g class="rp" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"><path d="M14 134h40M96 146h50M230 138h44M290 130h40"/></g>
+<g class="bt"><path d="M170 112h80l-8 12h-64z" fill="#fff" stroke="#23406B" stroke-width="1.5"/><rect x="190" y="100" width="42" height="12" fill="#fff" stroke="#23406B" stroke-width="1.5"/><rect x="200" y="91" width="20" height="9" fill="#D9482F"/></g>
+<g class="bt"><path d="M34 150q32 14 70 0l-8-9H42z" fill="#8A5A3B"/><path d="M60 139l14-19 14 19z" fill="#F2B441" stroke="#23406B" stroke-width="1.5"/></g>
+<path d="M0 10Q180 34 360 10" stroke="#23406B" fill="none" stroke-width="1.5"/>
+<g class="ln"><path d="M70 21v8" stroke="#23406B"/><ellipse cx="70" cy="40" rx="10" ry="13" fill="#D9482F"/></g>
+<g class="ln"><path d="M180 27v8" stroke="#23406B"/><ellipse cx="180" cy="46" rx="10" ry="13" fill="#F2B441"/></g>
+<g class="ln"><path d="M290 21v8" stroke="#23406B"/><ellipse cx="290" cy="40" rx="10" ry="13" fill="#E58FA6"/></g>
+<path d="M278 154h58a29 22 0 0 1-58 0z" fill="#fff" stroke="#23406B" stroke-width="1.5"/><ellipse cx="307" cy="154" rx="29" ry="5" fill="#B9794A"/>
+<g fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"><path class="st" d="M296 146q-5-8 0-14"/><path class="st" d="M308 146q-5-8 0-14"/><path class="st" d="M320 146q-5-8 0-14"/></g></svg>
+<div class="ht"><h1>北越龍龍經典 6 日</h1><p class="sm">河內老城 × 陸龍灣 × 下龍灣｜11/19（四）–11/24（二）</p><div class="cd" id="cd"></div></div></header>
+<nav id="nav"></nav><main id="v"></main>
+<footer class="c n"><span id="net"></span> <button class="ins" id="ins" data-a="ins" hidden>安裝到手機主畫面</button></footer></div>
+<script>
+/* ===== 資料區：[PDF]=原行程文件；tg=非 PDF 來源（建議／網路查得／待確認），可自行修改 ===== */
+const TRIP='2026-11-19',FL=[ // [PDF] 航班
+{lb:'去程',a:'星宇航空',no:'JX715',d:'11/19（四）',f:['TPE','桃園機場','第二航廈','08:10'],t:['HAN','河內內排機場','第二航廈','10:30'],du:'3 小時 20 分',bg:'23 公斤/件',ref:'訂位代號 FJZXFD',od:'易遊網訂單 ORD0032426348'},
+{lb:'回程',a:'長榮航空',no:'BR398',d:'11/24（二）',f:['HAN','河內內排機場','第二航廈','12:35'],t:['TPE','桃園機場','第二航廈','16:10'],du:'2 小時 35 分',bg:'23 公斤/件',ref:'訂位代號 ATIVML',od:'易遊網訂單 ORD0032426348'}];
+const H=[{s:'May De Ville',n:'May De Ville Corner Hotel',dt:'11/19–11/22、11/23–11/24（3＋1 晚）',rm:'4× Senior City View 精緻房 Premium（雙床房）',ad:'24 Phan Huy Chu, Hoàn Kiếm, Hà Nội',tg:'地址、電話、入退房為網路查得，請核對',tel:'+842439339999',ci:'入住 14:00／退房 12:00',nr:'步行約 9 分鐘到河內歌劇院',am:'免費 Wifi、盥洗用品；SPA、按摩、健身中心；早餐自助／歐陸／素食三選一；洗衣、熨燙；室外泳池、花園、露台；24 小時櫃檯（英語）、行李寄存',q:'May De Ville Corner Hotel Hanoi'},
+{s:'Hermes 郵輪',n:'Hermes Cruise 愛馬仕豪華五星級郵輪',dt:'11/22–11/23（1 晚）',rm:'4× Senior Suite 精緻房 Premium',ad:'Lot 20, Tuần Châu Port, Hạ Long, Quảng Ninh（巡洲島碼頭）',tg:'地址為網路查得，請核對',ci:'退房參考 09:30（PDF）',nr:'11/23 約 10:30 返抵巡洲島碼頭',am:'免費 Wifi；SPA、足浴、按摩；外幣兌換；洗衣、熨燙、公共廚房、烹飪課程；獨木舟、水上運動設施',q:'Hermes Cruise Tuan Chau Ha Long'}];
+const W0=[ // 天氣：2026/11/17 彙整多家預報，僅供參考（5 天以上變動大）；連網時自動以 Open-Meteo 更新
+{i:'🌧️',hi:21,lo:17,r:60,x:'多雲，局部小雨',t:'偏涼有雨：長袖＋薄外套、折傘'},{i:'☁️',hi:20,lo:16,r:40,x:'多雲，偶有零星小雨',t:'早晚約 16°：長袖＋防風外套，帶傘'},
+{i:'⛅',hi:22,lo:17,r:15,x:'多雲時晴（寧平）',t:'帽子、防曬、墨鏡；輕便雨衣；防滑鞋'},{i:'☁️',hi:24,lo:19,r:30,x:'多雲，海上風大（下龍灣）',t:'外套、泳衣、防水袋、暈車藥'},
+{i:'⛅',hi:25,lo:20,r:30,x:'多雲（下龍灣→河內）',t:'甲板早晨涼：外套；洞內階梯穿防滑鞋'},{i:'☁️',hi:25,lo:19,r:40,x:'多雲，午後零星小雨',t:'洋蔥式穿搭，帶傘'}];
+const D=[
+{d:'11/19',w:'四',t:'河內街頭美食導覽（私人團）',h:0,inc:'中文導遊、餐食與飲品（預算 250,000 VND/人）',rn:'小雨仍可進行：帶雨衣或折傘，街邊小吃優先選有遮蔽座位的店',ev:[
+{k:'a',t:'08:10',tw:1,n:'桃園機場 T2 起飛｜星宇 JX715',x:'10:30 抵達河內內排機場 T2（越南時間，比台灣慢 1 小時）'},
+{k:'a',t:'10:30',n:'抵達河內・入境、取 SIM 卡',q:'Noi Bai International Airport Terminal 2',x:'備妥護照＋列印 e-Visa，找「Welcome VIETNAM」舉牌人員走 VIP 快速通關。領行李後到 OUTO 櫃檯（出示護照與憑證 OUTO 4316，在出申報櫃檯左側電扶梯後第一間）領 Viettel SIM（每日 5GB／30 天）；可小額換匯，但市區匯率較佳，先與 XE App 比價。出大廳找 4 或 5 號柱（客服會先通知），司機舉牌接機。'},
+{tr:'專車',a:'機場',b:'老城區住宿',m:'約 1 小時'},
+{k:'a',n:'入住 May De Ville Corner Hotel',q:'May De Ville Corner Hotel Hanoi',x:'入住時間 PDF 未載明',tg:'官方入住 14:00（網路查得）'},
+{k:'m',n:'自由時間・Outo 指定按摩 60 分鐘',x:'按摩的日期與地點 PDF 未指定，請向 LINE 旅程管家確認',tg:'待確認'},
+{tr:'導遊會合',a:'住宿',b:'美食導覽起點',m:'集合地點待確認'},
+{k:'f',t:'18:00',n:'河內街頭美食導覽（約 3 小時）',q:'Hanoi Old Quarter street food',cu:'越式街頭小吃',bd:'250,000 VND/人（已含）',x:'可用 Outo 手冊飲食篇先挑 4-5 道。參考：牛肉河粉 Phở、法國麵包 Bánh mì、糯米飯 Xôi、越式海鮮煎餅 Bánh xèo、炸豆腐米線 Bún đậu mắm tôm、豬骨燉粥 Cháo sườn sụn。部分料理要徒手（如生春捲），帶酒精或濕紙巾。'}]},
+{d:'11/20',w:'五',t:'河內全日城市歷史導覽（私人團）',h:0,inc:'中文嚮導、專車、門票、午餐、咖啡',rn:'雨天可選「火爐監獄」（室內展區較多）；火車街咖啡改坐店內，注意鐵軌濕滑',ev:[
+{k:'a',t:'09:00',n:'出發・全日導覽（約 6 小時）',x:'09:00–16:00；順序依飯店位置與交通調整，導遊行前會確認；請告知導遊飲食狀況'},
+{k:'s',n:'胡志明陵寢',q:'Ho Chi Minh Mausoleum Hanoi',x:'河內最莊嚴的地標；不進去參觀'},
+{k:'s',n:'鎮國寺',q:'Tran Quoc Pagoda Hanoi',x:'河內最古老的寺廟，古老的佛塔與雕刻'},
+{k:'s',n:'玉山寺',q:'Ngoc Son Temple Hanoi',must:1,x:'從紅色「旭日橋」進入；建於 18 世紀，最有名的古寺之一'},
+{k:'f',n:'午餐｜Chả Cá Thăng Long 黃薑醃煎魚塊',q:'Cha Ca Thang Long Hanoi',cu:'河內名菜・煎魚',bd:'已含',x:'魚肉用薑黃、醬油、蒜頭醃好再煎至金黃，搭米線、香草、花生與魚露'},
+{k:'s',n:'文廟國子監',q:'Temple of Literature Hanoi',must:1,x:'越南最古老的大學（孔子），建於 11 世紀李朝'},
+{k:'s',n:'河內歌劇院',q:'Hanoi Opera House',x:'法國殖民時期建築；不進入參觀'},
+{k:'s',n:'河內火車街喝咖啡',q:'Hanoi Train Street',must:1,x:'鐵道從民房門口穿過，坐在鐵軌旁喝咖啡'},
+{k:'s',n:'大教堂',q:'St. Joseph Cathedral Hanoi',x:'仿巴黎聖母院的哥德式建築；不進入參觀'},
+{k:'s',n:'昇龍皇城／火爐監獄（2 選 1）',q:'Thang Long Imperial Citadel Hanoi',x:'昇龍皇城：越南千年皇城、世界文化遺產之一；火爐監獄：法國殖民時期關押革命戰士'},
+{k:'a',t:'16:00',n:'導覽結束'},
+{k:'f',t:'18:30',n:'晚餐｜La Badiane 法式米其林餐廳（自費）',q:'La Badiane 10 Nam Ngu Hanoi',cu:'法越融合',bd:'自費；參考約 VND 1,490,000 起/人',bk:'建議訂位 +84 24 3942 4509（週日公休）；訂位編號請填在「住宿速查」',tg:'價格、電話為網路查得（舊資料），請核對',x:'2023–2026 連續入選米其林指南推薦'}]},
+{d:'11/21',w:'六',t:'寧平陸龍灣一日遊（私人團）',h:0,inc:'中文導遊、專車接送、景點門票、船票、午餐',rn:'石階濕滑要穿防滑鞋；臥龍山若不適合登頂，改在山腳咖啡廳看景；竹筏全程穿救生衣、帶雨衣',ev:[
+{k:'a',t:'08:00',n:'河內出發・前往寧平',x:'車程約 2 小時，出發前先上廁所，途中要休息請跟導遊說；建議帶防曬乳、寬邊帽、墨鏡、水'},
+{k:'s',n:'胡華閭古都遺址',q:'Hoa Lu Ancient Capital Ninh Binh',x:'位於寧平，10 世紀丁朝與前黎朝的首都，越南早期王朝的歷史氣息'},
+{k:'f',n:'寧平在地餐廳午餐',cu:'寧平在地菜',bd:'已含',x:'特色料理是山羊肉'},
+{k:'s',n:'長安竹筏遊穿梭稻田谷',q:'Trang An Scenic Landscape Complex Ninh Binh',must:1,x:'小竹筏由船夫慢慢划行，約 2–3 小時，穿過石灰岩山、洞穴與稻田谷。穿救生衣並聽船夫指示；建議給船夫小費 50,000 VND（約 65 台幣）。⚠ PDF 此處另有「建於 18 世紀，最有名的古寺之一」，疑似複製錯誤，請向 Outo 確認'},
+{k:'s',n:'登臥龍山俯瞰陸龍灣峽谷',q:'Hang Mua Ninh Binh',must:1,x:'石階約 500 多階，登頂俯瞰稻田、河道與石灰岩山谷；山腳下有咖啡廳可看風景'},
+{k:'a',t:'16:00',n:'結束・返回河內'}]},
+{d:'11/22',w:'日',t:'下龍灣郵輪兩天一夜・第 1 天',h:1,inc:'接駁巴士、郵輪午餐與晚餐、景點活動（驚訝洞、英雄島）、船上活動（料理示範、夜釣烏賊）',rn:'船上活動依天氣調整，以船方通知為準；帶防水袋保護手機',ev:[
+{k:'a',t:'08:30',n:'飯店早餐・退房・搭郵輪巴士',q:'May De Ville Corner Hotel Hanoi',x:'不必要的行李可寄放飯店。於飯店會合，搭「與其他旅客共乘」的豪華小巴（非專屬包車），集合順序可能調整。建議先服暈車藥，早上少喝水。'},
+{tr:'共乘巴士',a:'河內飯店',b:'下龍灣郵輪港口',m:'約 3 小時（港口前約 30 分鐘停休息站；非購物站，只用洗手間也可以）'},
+{k:'f',n:'上船・郵輪午餐',cu:'海鮮、越式熱炒、沙拉、甜點',bd:'已含；船上飲料與水另付',x:'下車後等郵輪人員接送，旺季可能久候；多帶一點水上船'},
+{k:'s',n:'洞穴探索＋獨木舟',q:'Luon Cave Ha Long Bay',x:'獨木舟或竹筏穿越芸洞，兩岸石灰岩峭壁，運氣好能看到猴子。⚠ PDF 包含項目寫「驚訝洞」，但驚訝洞的說明在 Day 5'},
+{k:'s',n:'英雄島',q:'Titop Island Ha Long Bay',must:1,x:'登上制高點俯瞰下龍灣全景，可選擇在島邊海灘游泳'},
+{k:'f',n:'日落・料理示範・晚餐・夜釣烏賊',cu:'新鮮海鮮與越式佳餚',bd:'已含',x:'傍晚在甲板看日落；船上廚師教做越南春捲；晚餐後可體驗夜釣烏賊（旅程時間 08:30–17:00 為 PDF 標示）'}]},
+{d:'11/23',w:'一',t:'下龍灣郵輪兩天一夜・第 2 天',h:1,inc:'郵輪早午餐、船上活動（太極）、返回河內巴士',rn:'洞穴餐廳與驚訝洞都在洞內；纜車遇強風或雨可能暫停，以現場公告為準，請向導遊確認',ev:[
+{k:'a',t:'06:30',n:'日出甲板太極（自由參加）',x:'當日順序可能依天氣調整，以船上通知為準'},
+{k:'s',n:'驚訝洞',q:'Sung Sot Cave Ha Long Bay',must:1,x:'下龍灣最大最壯觀的洞穴之一；進洞約爬 120 級台階、出洞另爬約 200 級，體力較弱請量力'},
+{k:'f',t:'09:30',n:'退房・郵輪早午餐',bd:'已含',x:'10:30 郵輪返抵巡洲島碼頭，全船旅客約 09:30–10:30 離船。要盡快離場，洞穴餐廳演出前 15 分鐘停止接待'},
+{tr:'包車',a:'巡洲島碼頭',b:'龍騰碧珠洞',m:'時間待確認（不等巴士）'},
+{k:'f',t:'12:00',n:'龍騰碧珠洞・洞穴餐廳午餐',q:'龍騰碧珠洞 Ha Long',cu:'烤生蠔、鮮蚵、墨魚餅',bd:'已含',x:'1.5 億年歷史的鐘乳石洞穴，沉浸式實景匯演＋精緻美饌；素食菜單要提前跟餐廳說'},
+{k:'s',t:'15:30',n:'女皇雙層纜車',q:'Queen Cable Car Sun World Ha Long',must:1,x:'太陽世界下龍公園跨海纜車，全球最大雙層車廂與最高纜車支柱兩項金氏紀錄，360 度俯瞰喀斯特地貌（門票已含）'},
+{tr:'包車',a:'下龍灣',b:'河內飯店',m:'約 2.5 小時（約 17:00 上車）'},
+{k:'a',t:'20:00',n:'回到河內飯店（預計）',q:'May De Ville Corner Hotel Hanoi'}]},
+{d:'11/24',w:'二',t:'自由探索・接駁機場返國',h:0,inc:'專車接送機場',rn:'雨天路況可能較慢，保留充裕的機場時間',ev:[
+{k:'a',t:'08:30',n:'飯店門口專車接送',x:'班機起飛前 4 小時，Outo 專車準時在飯店門口會合。⚠ 08:30 就出發，實際自由時間很少'},
+{tr:'專車',a:'飯店',b:'河內機場 T2',m:'約 1 小時（依 Day 1 車程）'},
+{k:'a',t:'12:35',n:'河內 T2 起飛｜長榮 BR398',q:'Noi Bai International Airport Terminal 2',x:'16:10 抵達桃園 T2（台灣時間）；託運 23 公斤/件'}]}];
+const DEF={t:['列印越南電子簽證（e-Visa）','確認護照效期','列印或存檔機票、訂位資料','加入 Outo LINE 旅程管家','購買旅遊平安險／不便險（PDF 建議自理）','準備換匯（約 NT$3,000）與信用卡','安裝 XE Currency App','下載 Google 離線地圖','備暈車藥（Day 4 郵輪巴士）','告知導遊飲食狀況（Day 2）；素食要先告知洞穴餐廳（Day 5）'],
+b:['證件：護照、e-Visa 列印本、機票','衣物：短袖＋長袖薄上衣（洋蔥式）、防風薄外套、長褲','稍正式衣服（郵輪晚餐、洞穴餐廳拍照）','防滑運動鞋','牙刷牙膏、個人保養品、泳衣','太陽眼鏡、寬邊帽、防曬乳、防蚊液','防水袋、輕便雨衣、拖鞋／涼鞋、折疊傘','個人藥物：暈車藥、過敏藥、腸胃藥；隱形眼鏡','行動電源、充電器、萬國轉接頭','酒精或濕紙巾（街頭美食導覽）','選帶：登山杖、濾水器、吹風機、繃帶']};
+const INC=['私人中文導遊','私人專車接駁','導遊與司機小費','LINE 旅程管家','精選住宿','簽證代辦＋VIP 快速通關','景點門票','指定餐食與在地體驗','SIM 卡（每日 5GB／30 天）','Outo 指定按摩 60 分鐘'];
+/* ===== 程式 ===== */
+const $=s=>document.querySelector(s),Q=(k,d)=>{try{const v=localStorage.getItem('bv_'+k);return v==null?d:JSON.parse(v)}catch(x){return d}},P=(k,v)=>{try{localStorage.setItem('bv_'+k,JSON.stringify(v))}catch(x){}},e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const NOW=()=>{const m=new URLSearchParams(location.search).get('now');return m?new Date(m):new Date()};
+let tab=Q('tab',0),day=Q('day',0),rain=false,tags=Q('tags',true),dn=Q('dn',{}),ex=Q('ex',{}),rate=Q('rate',1.3),nt=Q('nt',{}),LW=Q('lw',{d:{},t:0}),ip;
+let LS=Q('ls',null)||{t:DEF.t.map(x=>({x,c:0})),b:DEF.b.map(x=>({x,c:0}))};
+const Wd=i=>Object.assign({},W0[i],LW.d[i]||{});
+const WX=c=>c==0?['☀️','晴']:c<3?['⛅','多雲時晴']:c==3?['☁️','陰']:c<50?['🌫️','霧']:c<80?['🌧️','雨']:c<95?['🌦️','陣雨']:['⛈️','雷雨'];
+const tg=t=>t&&tags?`<i class="tg">${e(t)}</i>`:'';
+const idx=()=>{const n=NOW(),v=new Date(n.getTime()+252e5);return Math.round((Date.parse(v.toISOString().slice(0,10))-Date.parse(TRIP))/864e5)};
+function cd(){const n=NOW(),S=Date.parse('2026-11-19T08:10:00+08:00'),E=Date.parse('2026-11-24T16:10:00+08:00');
+if(n<S){const m=Math.floor((S-n)/6e4);return `距離出發還有 <b>${Math.floor(m/1440)}</b> 天 <b>${Math.floor(m%1440/60)}</b> 小時 <b>${m%60}</b> 分`}
+if(n>E)return '旅程圓滿結束，歡迎回家！';
+const v=new Date(n.getTime()+252e5),i=Math.min(5,Math.max(0,idx())),hm=v.toISOString().slice(11,16),nx=D[i].ev.find(x=>x.t&&!x.tw&&x.t>hm);
+return `旅行第 <b>${i+1}</b> 天｜${nx?'下一個行程 '+nx.t+' '+e(nx.n):'今日行程已結束'}`}
+function R(){$('#nav').innerHTML=['🏠 總覽','🗓️ 每日行程','✅ 行前清單','🏨 住宿速查'].map((x,i)=>`<button data-a="tab" data-v="${i}" class="${i==tab?'on':''}">${x}</button>`).join('');
+$('#v').innerHTML=[home,dayV,listV,stayV][tab]()+`<button class="back" data-a="top">↑ 返回主選單</button>`;$('#cd').innerHTML=cd()}
+const go=()=>scrollTo({top:$('#nav').offsetTop-8,behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});
+function home(){return FL.map(f=>`<div class="c bp"><div class="bh"><b>${f.lb}</b><span>${f.a}｜${f.no}</span></div><div class="rt"><div><big>${f.f[0]}</big>${f.f[3]}<br><small>${f.f[1]}<br>${f.f[2]}</small></div><div class="ar">✈<br><small>${f.du}</small></div><div><big>${f.t[0]}</big>${f.t[3]}<br><small>${f.t[1]}<br>${f.t[2]}</small></div></div><div class="bm">${f.d}｜託運 ${f.bg}<br>${f.ref}｜${f.od}</div></div>`).join('')+`<p class="sm">※ 時間為當地時間，越南比台灣慢 1 小時。</p>
+<div class="c"><h3>行程一覽</h3><p class="sm">8 位成人・4 間雙床房・Outo 私人小團</p>${D.map((d,i)=>`<div class="li"><span><b>${d.d}（${d.w}）</b> ${e(d.t)}</span><button data-a="gd" data-v="${i}">查看</button></div>`).join('')}</div>
+<div class="c"><h3>行程已包含</h3><div class="chips">${INC.map(x=>`<span>${x}</span>`).join('')}</div><p class="sm">不含：國際段機票、旅遊平安險／不便險（自理）</p></div>`}
+function dayV(){const d=D[day],w=Wd(day),h=H[d.h],dd=h&&d.h==1&&day==4?H[0]:h,hh=day==4?H[0]:h,src=LW.t?`Open-Meteo 於 ${new Date(LW.t).toLocaleString('zh-TW',{hour12:false})} 更新`:'預報彙整於 2026/11/17（AccuWeather、Meteored、yr.no 等），僅供參考，連網時會自動更新';
+let o=`<div class="dg">${D.map((x,i)=>`<button class="db${i==day?' on':''}" data-a="day" data-v="${i}"><b>${x.d}（${x.w}）</b><span>第 ${i+1} 天</span></button>`).join('')}</div><h2>${e(d.t)}</h2><p class="sm">費用包含：${e(d.inc)}</p>
+<details class="c ib"><summary>${w.i} ${w.hi}°/${w.lo}°｜降雨 ${w.r}%｜🏨 ${hh.s}</summary><p>${w.x}。${w.t}</p><p class="sm">${src}</p><p>🏨 ${hh.n}<br>${hh.ad}${tg(hh.tg)}<br><a class="mb" style="margin:6px 0 0" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(hh.q)}">📍 飯店地圖</a></p></details>
+<div class="seg"><button data-a="rain" data-v="0" class="${rain?'':'on'}">☀️ 晴天行程</button><button data-a="rain" data-v="1" class="${rain?'on':''}">🌧️ 雨天備案</button></div>`;
+if(rain)o+=`<div class="c m"><b>☔ 雨天備案</b>${tg('建議，非原 PDF 行程')}<p style="margin:4px 0 0">${e(d.rn)}</p></div>`;
+let j=0;d.ev.forEach((x,i)=>{if(x.tr){o+=`<div class="tr">${x.tr=='專車'||x.tr=='包車'?'🚐':x.tr=='共乘巴士'?'🚌':'🚶'} ${x.tr}｜${x.a} → ${x.b}｜${x.m}</div>`;return}
+const k=day+'-'+i,c={a:'n',s:'s',f:'f',m:'m'}[x.k];
+o+=`<div class="c ${c} pop${dn[k]?' dn':''}" style="--i:${j++}"><div class="ct"><input type="checkbox" data-a="dn" data-v="${k}" ${dn[k]?'checked':''} aria-label="完成"><div><b>${x.t?`<span class="tm">${x.t}${x.tw?'（台灣）':''}</span>`:''}${e(x.n)}</b>${x.must?'<span class="mu">必去</span>':''}${tg(x.tg)}</div></div>`+
+(x.cu?`<div class="ex">料理：${e(x.cu)}｜預算：${e(x.bd)}${x.bk?'<br>訂位：'+e(x.bk):''}</div>`:'')+(x.x?`<div class="x">${e(x.x)}</div>`:'')+(x.q?`<a class="mb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(x.q)}">📍 地圖</a>`:'')+'</div>'});
+const dv=Number(ex[day]||0);return o+`<div class="c f2"><b>💰 今日花費（VND）</b><div class="row"><input type="number" inputmode="numeric" data-a="ex" data-v="${day}" value="${dv||''}" placeholder="0"></div></div>`}
+function listV(){return ['t','b'].map(g=>{const L=LS[g],n=L.filter(x=>x.c).length,p=L.length?Math.round(n/L.length*100):0;return `<div class="c"><h3>${g=='t'?'行前待辦':'行李準備'}（${n}/${L.length}）</h3><div class="pg"><i style="width:${p}%"></i></div>${L.map((x,i)=>`<div class="li"><input type="checkbox" data-a="ck" data-v="${g}:${i}" ${x.c?'checked':''}><span>${e(x.x)}</span><button data-a="rm" data-v="${g}:${i}" aria-label="移除">✕</button></div>`).join('')}<div class="add"><input id="in${g}" placeholder="新增項目"><button data-a="add" data-v="${g}">新增</button></div></div>`}).join('')}
+function stayV(){const tot=D.reduce((s,_,i)=>s+Number(ex[i]||0),0);
+return H.map(h=>`<div class="c"><h3>🏨 ${h.n}</h3><p style="margin:0"><b>${h.dt}</b><br>${h.rm}<br>${h.ad}${tg(h.tg)}<br>${h.ci}｜${h.nr}${h.tel?`<br>電話 <a class="tel" href="tel:${h.tel}">${h.tel}</a>`:''}<br><span class="sm">${h.am}</span><br>訂房參考：Outo REQ-260918-06c85</p><a class="mb" style="margin:8px 0 0" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(h.q)}">📍 開啟 Google 地圖</a></div>`).join('')+
+`<div class="c m"><h3>🛍️ 伴手禮與退稅</h3><p style="margin:0">河內老城區：咖啡、茶、腰果與果乾、手工藝品${tg('建議')}。下龍灣途中休息站有珍珠製品與在地小吃（PDF：非購物站，不必購買）。越南對外籍旅客有 VAT 退稅制度，需在指定商店消費並於機場辦理；本行程未安排購物，PDF 無資料，購物時請先詢問店家。</p></div>
+<div class="c"><h3>🚨 緊急聯絡</h3><p style="margin:0">警察 <a class="tel" href="tel:113">113</a>｜消防 <a class="tel" href="tel:114">114</a>｜救護 <a class="tel" href="tel:115">115</a><br>駐越南台北經濟文化辦事處（河內）<a class="tel" href="tel:+842438335501">+84-24-38335501</a><br>急難專線（非重大事件勿撥）<a class="tel" href="tel:+84913219986">+84-913219986</a><br>外交部旅外國人急難救助 <a class="tel" href="tel:+886800085095">+886-800-085-095</a>${tg('外交部領事事務局網站查得')}</p></div>
+<div class="c f2"><h3>📝 速查資料（自行填寫）</h3><div class="row"><label>訂位編號</label><input data-a="nt" data-v="bk" value="${e(nt.bk||'')}" placeholder="例：La Badiane"></div><div class="row"><label>保險資料</label><input data-a="nt" data-v="ins" value="${e(nt.ins||'')}" placeholder="保險公司／保單號碼／電話"></div></div>
+<div class="c f2"><h3>💰 旅費小計</h3><p style="margin:0">六天合計 <b>${tot.toLocaleString()}</b> VND ≈ NT$ <b>${Math.round(tot*rate/1000).toLocaleString()}</b></p><div class="row"><label>匯率</label><input type="number" step="0.01" data-a="rate" value="${rate}"></div><p class="sm" style="margin:0">每 1,000 VND 約 NT$（預設依 PDF：50,000 VND ≈ 65 台幣）。每日花費在「每日行程」最下方輸入。</p></div>
+<div class="c"><label class="li"><input type="checkbox" data-a="tags" ${tags?'checked':''}><span>顯示「建議／待確認／網路查得」標籤</span></label></div>`}
+document.addEventListener('click',ev=>{const t=ev.target.closest('[data-a]');if(!t)return;const a=t.dataset.a,v=t.dataset.v;
+if(a=='tab'){tab=+v;P('tab',tab);R();go()}else if(a=='day'){day=+v;P('day',day);R()}else if(a=='gd'){tab=1;day=+v;R();go()}else if(a=='rain'){rain=v=='1';R()}else if(a=='top')go();
+else if(a=='add'){const s=$('#in'+v).value.trim();if(s){LS[v].push({x:s,c:0});P('ls',LS);R()}}else if(a=='rm'){const[g,i]=v.split(':');LS[g].splice(+i,1);P('ls',LS);R()}else if(a=='ins'&&ip)ip.prompt()});
+document.addEventListener('change',ev=>{const t=ev.target,a=t.dataset.a,v=t.dataset.v;if(!a)return;
+if(a=='dn'){dn[v]=t.checked;P('dn',dn);t.closest('.c').classList.toggle('dn',t.checked)}else if(a=='ck'){const[g,i]=v.split(':');LS[g][+i].c=t.checked;P('ls',LS);R()}
+else if(a=='ex'){ex[v]=t.value;P('ex',ex)}else if(a=='rate'){rate=+t.value||1.3;P('rate',rate);R()}else if(a=='nt'){nt[v]=t.value;P('nt',nt)}else if(a=='tags'){tags=t.checked;P('tags',tags);R()}});
+async function fw(){const G={h:[21.03,105.85],n:[20.25,105.97],l:[20.96,107.04]},K=['h','h','n','l','l','h'];let ok=0;
+for(const g in G){try{const c=new AbortController();setTimeout(()=>c.abort(),8000);const j=(await(await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${G[g][0]}&longitude=${G[g][1]}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FBangkok&start_date=2026-11-19&end_date=2026-11-24`,{signal:c.signal})).json()).daily;
+K.forEach((k,i)=>{if(k==g){const w=WX(j.weather_code[i]);LW.d[i]={i:w[0],hi:Math.round(j.temperature_2m_max[i]),lo:Math.round(j.temperature_2m_min[i]),r:j.precipitation_probability_max[i],x:w[1]}}});ok=1}catch(x){}}
+if(ok){LW.t=Date.now();P('lw',LW);R()}}
+const nets=()=>$('#net').textContent=navigator.onLine?'🟢 已連線':'📴 離線模式（已存內容仍可使用）';
+addEventListener('online',()=>{nets();fw()});addEventListener('offline',nets);
+addEventListener('beforeinstallprompt',x=>{x.preventDefault();ip=x;$('#ins').hidden=false});
+if('serviceWorker' in navigator&&location.protocol.indexOf('http')==0)navigator.serviceWorker.register('sw.js').catch(()=>{});
+{const i=idx();if(NOW()>=Date.parse('2026-11-19T00:00:00+07:00')&&i>=0&&i<=5)day=i}
+R();nets();if(navigator.onLine)fw();setInterval(()=>{$('#cd').innerHTML=cd()},3e4);
+</script></body></html>
