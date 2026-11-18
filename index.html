@@ -80,7 +80,6 @@ const D=[
 {k:'a',t:'10:30',n:'抵達河內・入境、取 SIM 卡',q:'Noi Bai International Airport Terminal 2',x:'備妥護照＋列印 e-Visa，找「Welcome VIETNAM」舉牌人員走 VIP 快速通關。領行李後到 OUTO 櫃檯（出示護照與憑證 OUTO 4316，在出申報櫃檯左側電扶梯後第一間）領 Viettel SIM（每日 5GB／30 天）；可小額換匯，但市區匯率較佳，先與 XE App 比價。出大廳找 4 或 5 號柱（客服會先通知），司機舉牌接機。'},
 {tr:'專車',a:'機場',b:'老城區住宿',m:'約 1 小時'},
 {k:'a',n:'入住 May De Ville Corner Hotel',q:'May De Ville Corner Hotel Hanoi',x:'入住時間 PDF 未載明',tg:'官方入住 14:00（網路查得）'},
-{k:'m',n:'自由時間・Outo 指定按摩 60 分鐘',x:'按摩的日期與地點 PDF 未指定，請向 LINE 旅程管家確認',tg:'待確認'},
 {tr:'導遊會合',a:'住宿',b:'美食導覽起點',m:'集合地點待確認'},
 {k:'f',t:'18:00',n:'河內街頭美食導覽（約 3 小時）',q:'Hanoi Old Quarter street food',cu:'越式街頭小吃',bd:'250,000 VND/人（已含）',x:'可用 Outo 手冊飲食篇先挑 4-5 道。參考：牛肉河粉 Phở、法國麵包 Bánh mì、糯米飯 Xôi、越式海鮮煎餅 Bánh xèo、炸豆腐米線 Bún đậu mắm tôm、豬骨燉粥 Cháo sườn sụn。部分料理要徒手（如生春捲），帶酒精或濕紙巾。'}]},
 {d:'11/20',w:'五',t:'河內全日城市歷史導覽（私人團）',h:0,inc:'中文嚮導、專車、門票、午餐、咖啡',rn:'雨天可選「火爐監獄」（室內展區較多）；火車街咖啡改坐店內，注意鐵軌濕滑',ev:[
@@ -95,6 +94,7 @@ const D=[
 {k:'s',n:'大教堂',q:'St. Joseph Cathedral Hanoi',x:'仿巴黎聖母院的哥德式建築；不進入參觀'},
 {k:'s',n:'昇龍皇城／火爐監獄（2 選 1）',q:'Thang Long Imperial Citadel Hanoi',x:'昇龍皇城：越南千年皇城、世界文化遺產之一；火爐監獄：法國殖民時期關押革命戰士'},
 {k:'a',t:'16:00',n:'導覽結束'},
+{k:'m',t:'16:00',n:'按摩｜Spas Hanoi（60 分鐘）',q:'Spas Hanoi',u:'https://maps.app.goo.gl/4osZVt9hwcq56ru37',x:'導覽結束後的按摩行程，16:00 開始，時長 60 分鐘（約 17:00 結束）'},
 {k:'f',t:'18:30',n:'晚餐｜La Badiane 法式米其林餐廳（自費）',q:'La Badiane 10 Nam Ngu Hanoi',cu:'法越融合',bd:'自費；參考約 VND 1,490,000 起/人',bk:'建議訂位 +84 24 3942 4509（週日公休）；訂位編號請填在「住宿速查」',tg:'價格、電話為網路查得（舊資料），請核對',x:'2023–2026 連續入選米其林指南推薦'}]},
 {d:'11/21',w:'六',t:'寧平陸龍灣一日遊（私人團）',h:0,inc:'中文導遊、專車接送、景點門票、船票、午餐',rn:'石階濕滑要穿防滑鞋；臥龍山若不適合登頂，改在山腳咖啡廳看景；竹筏全程穿救生衣、帶雨衣',ev:[
 {k:'a',t:'08:00',n:'河內出發・前往寧平',x:'車程約 2 小時，出發前先上廁所，途中要休息請跟導遊說；建議帶防曬乳、寬邊帽、墨鏡、水'},
@@ -129,11 +129,11 @@ const INC=['私人中文導遊','私人專車接駁','導遊與司機小費','LI
 /* ===== 程式 ===== */
 const $=s=>document.querySelector(s),Q=(k,d)=>{try{const v=localStorage.getItem('bv_'+k);return v==null?d:JSON.parse(v)}catch(x){return d}},P=(k,v)=>{try{localStorage.setItem('bv_'+k,JSON.stringify(v))}catch(x){}},e=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const NOW=()=>{const m=new URLSearchParams(location.search).get('now');return m?new Date(m):new Date()};
-let tab=Q('tab',0),day=Q('day',0),rain=false,tags=Q('tags',true),dn=Q('dn',{}),ex=Q('ex',{}),rate=Q('rate',1.3),nt=Q('nt',{}),LW=Q('lw',{d:{},t:0}),ip;
+let tab=Q('tab',0),day=Q('day',0),rain=false,dn=Q('dn',{}),ex=Q('ex',{}),rate=Q('rate',1.3),nt=Q('nt',{}),LW=Q('lw',{d:{},t:0}),ip;
 let LS=Q('ls',null)||{t:DEF.t.map(x=>({x,c:0})),b:DEF.b.map(x=>({x,c:0}))};
 const Wd=i=>Object.assign({},W0[i],LW.d[i]||{});
 const WX=c=>c==0?['☀️','晴']:c<3?['⛅','多雲時晴']:c==3?['☁️','陰']:c<50?['🌫️','霧']:c<80?['🌧️','雨']:c<95?['🌦️','陣雨']:['⛈️','雷雨'];
-const tg=t=>t&&tags?`<i class="tg">${e(t)}</i>`:'';
+const tg=()=>'';
 const idx=()=>{const n=NOW(),v=new Date(n.getTime()+252e5);return Math.round((Date.parse(v.toISOString().slice(0,10))-Date.parse(TRIP))/864e5)};
 function cd(){const n=NOW(),S=Date.parse('2026-11-19T08:10:00+08:00'),E=Date.parse('2026-11-24T16:10:00+08:00');
 if(n<S){const m=Math.floor((S-n)/6e4);return `距離出發還有 <b>${Math.floor(m/1440)}</b> 天 <b>${Math.floor(m%1440/60)}</b> 小時 <b>${m%60}</b> 分`}
@@ -154,7 +154,7 @@ if(rain)o+=`<div class="c m"><b>☔ 雨天備案</b>${tg('建議，非原 PDF �
 let j=0;d.ev.forEach((x,i)=>{if(x.tr){o+=`<div class="tr">${x.tr=='專車'||x.tr=='包車'?'🚐':x.tr=='共乘巴士'?'🚌':'🚶'} ${x.tr}｜${x.a} → ${x.b}｜${x.m}</div>`;return}
 const k=day+'-'+i,c={a:'n',s:'s',f:'f',m:'m'}[x.k];
 o+=`<div class="c ${c} pop${dn[k]?' dn':''}" style="--i:${j++}"><div class="ct"><input type="checkbox" data-a="dn" data-v="${k}" ${dn[k]?'checked':''} aria-label="完成"><div><b>${x.t?`<span class="tm">${x.t}${x.tw?'（台灣）':''}</span>`:''}${e(x.n)}</b>${x.must?'<span class="mu">必去</span>':''}${tg(x.tg)}</div></div>`+
-(x.cu?`<div class="ex">料理：${e(x.cu)}｜預算：${e(x.bd)}${x.bk?'<br>訂位：'+e(x.bk):''}</div>`:'')+(x.x?`<div class="x">${e(x.x)}</div>`:'')+(x.q?`<a class="mb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(x.q)}">📍 地圖</a>`:'')+'</div>'});
+(x.cu?`<div class="ex">料理：${e(x.cu)}｜預算：${e(x.bd)}${x.bk?'<br>訂位：'+e(x.bk):''}</div>`:'')+(x.x?`<div class="x">${e(x.x)}</div>`:'')+(x.q||x.u?`<a class="mb" target="_blank" rel="noopener" href="${x.u||'https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(x.q)}">📍 地圖</a>`:'')+'</div>'});
 const dv=Number(ex[day]||0);return o+`<div class="c f2"><b>💰 今日花費（VND）</b><div class="row"><input type="number" inputmode="numeric" data-a="ex" data-v="${day}" value="${dv||''}" placeholder="0"></div></div>`}
 function listV(){return ['t','b'].map(g=>{const L=LS[g],n=L.filter(x=>x.c).length,p=L.length?Math.round(n/L.length*100):0;return `<div class="c"><h3>${g=='t'?'行前待辦':'行李準備'}（${n}/${L.length}）</h3><div class="pg"><i style="width:${p}%"></i></div>${L.map((x,i)=>`<div class="li"><input type="checkbox" data-a="ck" data-v="${g}:${i}" ${x.c?'checked':''}><span>${e(x.x)}</span><button data-a="rm" data-v="${g}:${i}" aria-label="移除">✕</button></div>`).join('')}<div class="add"><input id="in${g}" placeholder="新增項目"><button data-a="add" data-v="${g}">新增</button></div></div>`}).join('')}
 function stayV(){const tot=D.reduce((s,_,i)=>s+Number(ex[i]||0),0);
@@ -162,14 +162,13 @@ return H.map(h=>`<div class="c"><h3>🏨 ${h.n}</h3><p style="margin:0"><b>${h.d
 `<div class="c m"><h3>🛍️ 伴手禮與退稅</h3><p style="margin:0">河內老城區：咖啡、茶、腰果與果乾、手工藝品${tg('建議')}。下龍灣途中休息站有珍珠製品與在地小吃（PDF：非購物站，不必購買）。越南對外籍旅客有 VAT 退稅制度，需在指定商店消費並於機場辦理；本行程未安排購物，PDF 無資料，購物時請先詢問店家。</p></div>
 <div class="c"><h3>🚨 緊急聯絡</h3><p style="margin:0">警察 <a class="tel" href="tel:113">113</a>｜消防 <a class="tel" href="tel:114">114</a>｜救護 <a class="tel" href="tel:115">115</a><br>駐越南台北經濟文化辦事處（河內）<a class="tel" href="tel:+842438335501">+84-24-38335501</a><br>急難專線（非重大事件勿撥）<a class="tel" href="tel:+84913219986">+84-913219986</a><br>外交部旅外國人急難救助 <a class="tel" href="tel:+886800085095">+886-800-085-095</a>${tg('外交部領事事務局網站查得')}</p></div>
 <div class="c f2"><h3>📝 速查資料（自行填寫）</h3><div class="row"><label>訂位編號</label><input data-a="nt" data-v="bk" value="${e(nt.bk||'')}" placeholder="例：La Badiane"></div><div class="row"><label>保險資料</label><input data-a="nt" data-v="ins" value="${e(nt.ins||'')}" placeholder="保險公司／保單號碼／電話"></div></div>
-<div class="c f2"><h3>💰 旅費小計</h3><p style="margin:0">六天合計 <b>${tot.toLocaleString()}</b> VND ≈ NT$ <b>${Math.round(tot*rate/1000).toLocaleString()}</b></p><div class="row"><label>匯率</label><input type="number" step="0.01" data-a="rate" value="${rate}"></div><p class="sm" style="margin:0">每 1,000 VND 約 NT$（預設依 PDF：50,000 VND ≈ 65 台幣）。每日花費在「每日行程」最下方輸入。</p></div>
-<div class="c"><label class="li"><input type="checkbox" data-a="tags" ${tags?'checked':''}><span>顯示「建議／待確認／網路查得」標籤</span></label></div>`}
+<div class="c f2"><h3>💰 旅費小計</h3><p style="margin:0">六天合計 <b>${tot.toLocaleString()}</b> VND ≈ NT$ <b>${Math.round(tot*rate/1000).toLocaleString()}</b></p><div class="row"><label>匯率</label><input type="number" step="0.01" data-a="rate" value="${rate}"></div><p class="sm" style="margin:0">每 1,000 VND 約 NT$（預設依 PDF：50,000 VND ≈ 65 台幣）。每日花費在「每日行程」最下方輸入。</p></div>`}
 document.addEventListener('click',ev=>{const t=ev.target.closest('[data-a]');if(!t)return;const a=t.dataset.a,v=t.dataset.v;
 if(a=='tab'){tab=+v;P('tab',tab);R();go()}else if(a=='day'){day=+v;P('day',day);R()}else if(a=='gd'){tab=1;day=+v;R();go()}else if(a=='rain'){rain=v=='1';R()}else if(a=='top')go();
 else if(a=='add'){const s=$('#in'+v).value.trim();if(s){LS[v].push({x:s,c:0});P('ls',LS);R()}}else if(a=='rm'){const[g,i]=v.split(':');LS[g].splice(+i,1);P('ls',LS);R()}else if(a=='ins'&&ip)ip.prompt()});
 document.addEventListener('change',ev=>{const t=ev.target,a=t.dataset.a,v=t.dataset.v;if(!a)return;
 if(a=='dn'){dn[v]=t.checked;P('dn',dn);t.closest('.c').classList.toggle('dn',t.checked)}else if(a=='ck'){const[g,i]=v.split(':');LS[g][+i].c=t.checked;P('ls',LS);R()}
-else if(a=='ex'){ex[v]=t.value;P('ex',ex)}else if(a=='rate'){rate=+t.value||1.3;P('rate',rate);R()}else if(a=='nt'){nt[v]=t.value;P('nt',nt)}else if(a=='tags'){tags=t.checked;P('tags',tags);R()}});
+else if(a=='ex'){ex[v]=t.value;P('ex',ex)}else if(a=='rate'){rate=+t.value||1.3;P('rate',rate);R()}else if(a=='nt'){nt[v]=t.value;P('nt',nt)}});
 async function fw(){const G={h:[21.03,105.85],n:[20.25,105.97],l:[20.96,107.04]},K=['h','h','n','l','l','h'];let ok=0;
 for(const g in G){try{const c=new AbortController();setTimeout(()=>c.abort(),8000);const j=(await(await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${G[g][0]}&longitude=${G[g][1]}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FBangkok&start_date=2026-11-19&end_date=2026-11-24`,{signal:c.signal})).json()).daily;
 K.forEach((k,i)=>{if(k==g){const w=WX(j.weather_code[i]);LW.d[i]={i:w[0],hi:Math.round(j.temperature_2m_max[i]),lo:Math.round(j.temperature_2m_min[i]),r:j.precipitation_probability_max[i],x:w[1]}}});ok=1}catch(x){}}
